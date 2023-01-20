@@ -1,24 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+import { useSelector } from 'react-redux';
+
 function App() {
+
+  const characters = useSelector(state => state.characters)
+  console.log(characters)
+  const challenges = useSelector(state => state.challenges)
+  console.log(challenges)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hello World! and {characters}</h1>
     </div>
   );
 }
