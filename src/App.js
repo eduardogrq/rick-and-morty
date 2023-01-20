@@ -7,8 +7,6 @@ function App() {
 
   const characters = useSelector(state => state.characters)
   console.log(characters)
-  const challenges = useSelector(state => state.challenges)
-  console.log(challenges)
 
   return (
     <div className="App">
